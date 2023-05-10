@@ -1,30 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<title>BroskaH's Webpage</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <base href="https://www.example.com/" target="_blank">-->
-<!-- only one base element per html page . element is base URL from which all relative URLs refer to-->
 
-<style>
-  body {background-color: black;}
-  h1   {color:rgb(16, 214, 62);}
-  p    {color:rgb(16, 214, 62);}
-  pre    {color:rgb(16, 214, 62);}
-  a       {color:rgb(16, 214, 62);}
+<head>
+  <title>BroskaH's Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <base href="https://www.example.com/" target="_blank">-->
+  <!-- only one base element per html page . element is base URL from which all relative URLs refer to-->
+  <!-- To format/beautify code: On MacOS: (shift, option, f), On Windows: (Ctrl, Shift, I)-->
+
+  <style>
+    body {
+      background-color: black;
+    }
+
+    h1 {
+      color: rgb(16, 214, 62);
+    }
+
+    p {
+      color: rgb(16, 214, 62);
+    }
+
+    pre {
+      color: rgb(16, 214, 62);
+    }
+
+    a {
+      color: rgb(16, 214, 62);
+    }
+
+    hr {
+      height: 2px;
+      background-color: rgb(16, 214, 62);
+      border: none;
+    }
+
+    .left {
+      background-color: #1f2021;
+      padding: 4px;
+      float: left;
+      width: 20%;
+      text-align: center;
+      border: 1px solid rgb(14, 223, 10);
+      /* The width is 20%, by default */
+    }
+
+    .mid {
+      background-color: #1f2021;
+      padding: 4px;
+      float: left;
+      width: 20%;
+      text-align: center;
+      border: 1px solid rgb(14, 223, 10);
+      /* The width is 20%, by default */
+    }
+
+    .right {
+      background-color: #1f2021;
+      padding: 4px;
+      float: left;
+      width: 20%;
+      text-align: center;
+      border: 1px solid rgb(14, 223, 10);
+      /* The width is 20%, by default */
+    }
+
+    /* Use a media query to add a break point at 800px to make content stack vertically: */
+    @media screen and (max-width: 800px) {
+
+      .left,
+      .mid,
+      .right {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+      }
+    }
   </style>
 </head>
+
 <body>
-<h1 style="font-size:2vw"> Welcome To My Website!</h1>
-<hr>
-<p style="font-size:1vw">This is a constant work in progress to prove my skills to myself and others.</p>
-<p style="font-size:1vw"> Click the link below to visit my Github!!</p>
-<p style="font-size:1vw" title='Rasta "SmokesWeed" BroskaH'>My nickname!</p>
-<p style="font-size:1vw" >Goku fires the kamehameha.</p>
-<a style="font-size:1vw" href="https://github.com/GregBroseker">BroskaH's Github</a>
-<img src="goku.png" alt="The strongest anime character ever!" max-width="100%;"> </body>
+  <h1 style="font-size:2vw"> Welcome To My Website!</h1>
+  <hr>
+  <p style="font-size:1vw">This is a constant work in progress to prove my skills to myself and others.</p>
+  <p style="font-size:1vw"> Click the link below to visit my Github!!</p>
+  <p style="font-size:1vw" title='Rasta "SmokesWeed" BroskaH'>My nickname!</p>
+  <p style="font-size:1vw">Goku fires the kamehameha.</p>
+  <a style="font-size:1vw" href="https://github.com/GregBroseker">BroskaH's Github</a>
+  <img src="goku.png" alt="The strongest anime character ever!" max-width="100%;">
+</body>
 <p title="Gohan">What is Goku's son's name?</p>
-<pre>
+<pre style="font-size:1vw">
     The pre tag is for formatting
   
     and formatting you should do
@@ -33,4 +98,20 @@
   
     So i want you to use the pre tag too!
   </pre>
+<div class="left">
+  <p style="font-size:2vw">Characters</p>
+  <hr>
+  <p style="font-size:1vw">More text</p>
+</div>
+<div class="mid">
+  <p style="font-size:2vw">Special Moves</p>
+  <hr>
+  <p style="font-size:1vw">More text</p>
+</div>
+<div class="right">
+  <p style="font-size:2vw">Tier</p>
+  <hr>
+  <p style="font-size:1vw">More text</p>
+</div>
+
 </html>
