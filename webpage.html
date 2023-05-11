@@ -3,12 +3,21 @@
 
 <head>
   <title>BroskaH's Webpage</title>
+  <!-- meta tag with viewport info is to keep site scalable and readable on any device-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <base href="https://www.example.com/" target="_blank">-->
   <!-- only one base element per html page . element is base URL from which all relative URLs refer to-->
   <!-- To format/beautify code: On MacOS: (shift, option, f), On Windows: (Ctrl, Shift, I)-->
-
+  <!--'* means all HTML tags'-->
+  <!--box-sizing: border-box accounts for padding, margins, etc when styling elements so every element is easier to style and less error prone-->
+  <!--'pre tag preserves user line breaks and whitespace'-->
+  <!--'hr' is a horizontal rule, or line across the dimension-->
+  <!--.left, right, and mid are classes with properties that are made responsive for any device viewing the webpage by the @media query.-->
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: black;
     }
@@ -66,7 +75,7 @@
     }
 
     /* Use a media query to add a break point at 800px to make content stack vertically: */
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 620px) {
 
       .left,
       .mid,
@@ -77,6 +86,7 @@
     }
   </style>
 </head>
+<!--font size vw is to keep all font on screen scalable depending on size of browser window-->
 
 <body>
   <h1 style="font-size:2vw"> Welcome To My Website!</h1>
@@ -98,6 +108,8 @@
   
     So i want you to use the pre tag too!
   </pre>
+<!--div tag is a parent container for other html elements such as p, a, h1-6, etc. Div is easily accessed with CSS classes or HTML ids, 
+    making styling div tags, (sections of html documents easy)-->
 <div class="left">
   <p style="font-size:2vw">Characters</p>
   <hr>
