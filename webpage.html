@@ -9,23 +9,21 @@
   <!-- <base href="https://www.example.com/" target="_blank">-->
   <!-- only one base element per html page . element is base URL from which all relative URLs refer to-->
   <!-- To format/beautify code: On MacOS: (shift, option, f), On Windows: (Ctrl, Shift, I)-->
-  <!--'* means all HTML tags'-->
-  <!--box-sizing: border-box accounts for padding, margins, etc when styling elements so every element is easier to style and less error prone-->
-  <!--'pre tag preserves user line breaks and whitespace'-->
-  <!--'hr' is a horizontal rule, or line across the dimension-->
-  <!--.left, right, and mid are classes with properties that are made responsive for any device viewing the webpage by the @media query.-->
   <!--<picture> tag is so you can show different pictures at different screen sizes/resolutions-->
   <!--To display a less than sign (<) you must write: &lt; or &#60;-->
   <!--If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, you can use the &nbsp (non-breaking space); character entity.-->
   <!--(&#8209;) is the non breaking hyphen. These symbols are called entities and a complete list can be looked up when needed-->
   <!--To let the browser understand that you are displaying a character/entity, you must start the entity number with &# and end it with ;-->
   <style>
+    /*box-sizing: border-box accounts for padding, margins, etc when styling elements so every element is easier to style and less error prone*/
+    /*'* means all HTML tags'*/
+
     * {
       box-sizing: border-box;
     }
 
     body {
-      background-color: black;
+      background-color: rgb(3, 3, 3);
     }
 
     h1 {
@@ -34,19 +32,24 @@
 
     h2 {
       color: rgb(16, 214, 62);
+      clear: left;
     }
 
+    /*text input boxes on html form*/
     input[type=text],
     select,
     textarea {
+      background-color: #1f2021;
       width: 100%;
       padding: 12px;
-      border: 1px solid #ccc;
+      border: 1px solid rgb(16, 214, 62);
       border-radius: 4px;
       resize: vertical;
     }
 
+    /*html form labels that request info from user (First name, last name, country, subject)*/
     label {
+      color: chartreuse;
       padding: 12px 12px 12px 0;
       display: inline-block;
     }
@@ -54,7 +57,7 @@
     /*submit button*/
     input[type=submit] {
       background-color: #04AA6D;
-      color: white;
+      color: chartreuse;
       padding: 12px 20px;
       border: none;
       border-radius: 4px;
@@ -62,22 +65,27 @@
       float: right;
     }
 
+    /*hover color when cursor is placed over submit button*/
     input[type=submit]:hover {
-      background-color: #45a049;
+      background-color: #d31c84;
     }
 
+    /*html form background*/
     .container {
+      border: 2px solid chartreuse;
       border-radius: 5px;
-      background-color: #f2f2f2;
+      background-color: #232327;
       padding: 20px;
     }
 
+    /*left 25% width/size of the html form.*/
     .col-25 {
       float: left;
       width: 25%;
       margin-top: 6px;
     }
 
+    /*right 75% width of the form*/
     .col-75 {
       float: left;
       width: 75%;
@@ -85,6 +93,8 @@
     }
 
     /* Clear floats after the columns */
+    /*floats are to float elements beside each other and clear is to make the new elements not float anymore so they 
+    go below instead of beside each other*/
     .row:after {
       content: "";
       display: table;
@@ -140,6 +150,19 @@
       /* The width is 20%, by default */
     }
 
+    input{
+      color: chartreuse;
+    }
+
+    select{
+      color: chartreuse;
+    }
+
+    textarea {
+      color: chartreuse;
+    }
+
+    /*.left, right, and mid are classes with properties that are made responsive for any device viewing the webpage by the @media query.*/
     /* Use a media query to add a break point at 800px to make content stack vertically: */
     @media screen and (max-width: 620px) {
 
@@ -166,10 +189,10 @@
   <p style="font-size:1vw" title='Rasta "SmokesWeed" BroskaH'>My nickname!</p>
   <p style="font-size:1vw">Goku fires the kamehameha.</p>
   <a style="font-size:1vw" href="https://github.com/GregBroseker">BroskaH's Github</a>
-  <img src="goku.png" alt="The strongest anime character ever!" max-width="100%;">
-</body>
-<p title="Gohan">What is Goku's son's name?</p>
-<pre style="font-size:1vw">
+  <!--<img src="goku.png" alt="The strongest anime character ever!" max-width="100%;">-->
+  <p title="Gohan">What is Goku's son's name?</p>
+  <!--'pre tag preserves user line breaks and whitespace'-->
+  <pre style="font-size:1vw">
     The pre tag is for formatting
   
     and formatting you should do
@@ -178,86 +201,73 @@
   
     So i want you to use the pre tag too!
   </pre>
-<!--div tag is a parent container for other html elements such as p, a, h1-6, etc. Div is easily accessed with CSS classes or HTML ids, 
+  <!--div tag is a parent container for other html elements such as p, a, h1-6, etc. Div is easily accessed with CSS classes or HTML ids, 
     making styling div tags, (sections of html documents easy)-->
-<div class="left">
-  <p style="font-size:2vw">Characters</p>
-  <hr>
-  <p style="font-size:1vw">More text</p>
-</div>
-<div class="mid">
-  <p style="font-size:2vw">Special Moves</p>
-  <hr>
-  <p style="font-size:1vw">More text</p>
-</div>
-<div class="right">
-  <p style="font-size:2vw">Tier</p>
-  <hr>
-  <p style="font-size:1vw">More text</p>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h2 style="font-size:4vw">Responsive HTML/Web Form</h2>
-<p style="font-size:2vw">Resize the browser window/use a different device to see the effect. When the screen is less
-  than 620px wide, make the two columns stack on
-  top of each other instead of next to each other.</p>
+  <div class="left">
+    <p style="font-size:2vw">Characters</p>
+    <!--'hr' is a horizontal rule, or line across the dimension-->
+    <hr>
+    <p style="font-size:1vw">More text</p>
+  </div>
+  <div class="mid">
+    <p style="font-size:2vw">Special Moves</p>
+    <hr>
+    <p style="font-size:1vw">More text</p>
+  </div>
+  <div class="right">
+    <p style="font-size:2vw">Tier</p>
+    <hr>
+    <p style="font-size:1vw">More text</p>
+  </div>
 
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
+  <h2 style="font-size:4vw">Responsive HTML/Web Form</h2>
+  <p style="font-size:2vw">Resize the browser window/use a different device to see the effect. When the screen is less
+    than 620px wide, make the two columns stack on
+    top of each other instead of next to each other.</p>
+
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        </div>
       </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Country</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
       </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Country</label>
+      <div class="row">
+        <input type="submit" value="Submit">
       </div>
-      <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
+</body>
 
 </html>
