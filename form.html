@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <!-- meta tag with viewport info is to keep site scalable and readable on any device-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <base href="https://www.example.com/" target="_blank">-->
+  <!-- only one base element per html page . element is base URL from which all relative URLs refer to-->
+  <!-- To format/beautify code: On MacOS: (shift, option, f), On Windows: (Ctrl, Shift, I)-->
+  <!--<picture> tag is so you can show different pictures at different screen sizes/resolutions-->
+  <!--To display a less than sign (<) you must write: &lt; or &#60;-->
+  <!--If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, you can use the &nbsp (non-breaking space); character entity.-->
+  <!--(&#8209;) is the non breaking hyphen. These s
+  ymbols are called entities and a complete list can be looked up when needed-->
+  <!--To let the browser understand that you are displaying a character/entity, you must start the entity number with &# and end it with ;-->
+  <style>
+    /*box-sizing: border-box accounts for padding, margins, etc when styling elements so every element is easier to style and less error prone*/
+    /*'* means all HTML tags'*/
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(19, 18, 18);
+    }
+
+    h1 {
+      color: rgb(16, 214, 62);
+    }
+
+    h2 {
+      color: rgb(16, 214, 62);
+      clear: left;
+    }
+
+    /*text input boxes on html form*/
+    input[type=text],
+    select,
+    textarea {
+      background-color: #1f2021;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgb(16, 214, 62);
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    /*html form labels that request info from user (First name, last name, country, subject)*/
+    label {
+      color: chartreuse;
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    /*submit button*/
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: chartreuse;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    /*hover color when cursor is placed over submit button*/
+    input[type=submit]:hover {
+      background-color: #d31c84;
+    }
+
+    /*html form background*/
+    .container {
+      border: 2px solid chartreuse;
+      border-radius: 5px;
+      background-color: #232327;
+      padding: 20px;
+    }
+
+    /*left 25% width/size of the html form.*/
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    /*right 75% width of the form*/
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    /*floats are to float elements beside each other and clear is to make the new elements not float anymore so they 
+    go below instead of beside each other*/
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    p {
+      color: rgb(12, 206, 57);
+    }
+
+    pre {
+      color: rgb(14, 233, 65);
+    }
+
+    a {
+      color: rgb(16, 214, 62);
+    }
+
+    hr {
+      height: 2px;
+      background-color: rgb(16, 214, 62);
+      border: none;
+    }
+
+</style>
+<body>
+<h2 style="font-size:4vw">Responsive HTML/Web Form</h2>
+<p style="font-size:2vw">Resize the browser window/use a different device to see the effect. When the screen is less
+  than 620px wide, make the two columns stack on
+  top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+<pre style="font-size:1vw">
+  The pre tag is for formatting
+
+  and formatting you should do
+
+  It makes me glad when i format
+
+  So i want you to use the pre tag too!
+</pre>
+</head>
+</body>
